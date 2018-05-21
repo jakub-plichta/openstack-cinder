@@ -1,4 +1,4 @@
-%define gdc_version .gdc1
+%define gdc_version .gdc2
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 %global pypi_name cinder
 
@@ -97,6 +97,7 @@ Requires:         qemu-img
 Requires:         sysfsutils
 Requires:         os-brick
 Requires:         python-paramiko
+Requires:         python2-crypto
 
 Requires:         python-qpid
 Requires:         python-kombu
@@ -347,6 +348,9 @@ exit 0
 %endif
 
 %changelog
+* Mon May 21 2018 Adam Tkac <adam.tkac@gooddata.com> 8.0.0-1.gdc2
+- cinder requires python2-crypto
+
 * Fri Aug 26 2016 Tomas Dubec <tomas.dubec@gooddata> 8.0.0-1.gdc1
 - adapt spec for GoodData build
 
